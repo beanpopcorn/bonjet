@@ -1,0 +1,10 @@
+application/admin/controller/Company.php
+application/admin/model/Company.php
+application/admin/template/company/add.htm
+application/admin/template/company/edit.htm
+application/admin/template/company/index.htm
+application/common/model/Company.php
+application/home/controller/Company.php
+application/home/model/Company.php
+template/pc/lists_company.htm
+template/pc/view_company.htm

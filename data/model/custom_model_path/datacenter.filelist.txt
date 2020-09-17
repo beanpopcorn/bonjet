@@ -1,0 +1,10 @@
+application/admin/controller/Datacenter.php
+application/admin/model/Datacenter.php
+application/admin/template/datacenter/add.htm
+application/admin/template/datacenter/edit.htm
+application/admin/template/datacenter/index.htm
+application/common/model/Datacenter.php
+application/home/controller/Datacenter.php
+application/home/model/Datacenter.php
+template/pc/lists_datacenter.htm
+template/pc/view_datacenter.htm

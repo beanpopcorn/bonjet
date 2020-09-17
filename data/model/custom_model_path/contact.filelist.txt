@@ -1,0 +1,10 @@
+application/admin/controller/Contact.php
+application/admin/model/Contact.php
+application/admin/template/contact/add.htm
+application/admin/template/contact/edit.htm
+application/admin/template/contact/index.htm
+application/common/model/Contact.php
+application/home/controller/Contact.php
+application/home/model/Contact.php
+template/pc/lists_contact.htm
+template/pc/view_contact.htm

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>{$eyou.field.seo_title}</title> 
+    <meta name="renderer" content="webkit" /> 
+    <meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" /> 
+    <meta name="description" content="{$eyou.field.seo_description}" /> 
+    <meta name="keywords" content="{$eyou.field.seo_keywords}" />
+    <link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link media="screen and (min-width:768px)" rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/css.css">
+    <link media="screen and (max-width:768px)" rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/mobile.css">
+    {eyou:static file="skin/css/basic.css" /}
+    {eyou:static file="skin/css/swiper.min.css" /}
+    
+    {eyou:static file="skin/js/jquery.min.js" /}
+    {eyou:static file="skin/js/ft-carousel.min.js" /}
+ </head> 
+
+<body>
+    {eyou:include file="header.htm" /}
+
+    <div class="company">
+        {eyou:include file="menu.htm" /}
+        <div class="contact-page">
+            <div class="google-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.401370304706!2d114.17658101534586!3d22.300655248516478!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x340400ef4296cd55%3A0xe8f1cd2b51abccdc!2z5bCW5p2x56eR5a246aSo6YGTMTTomZ_mlrDmlofljY7kuK3lv4NC5bqn!5e0!3m2!1szh-CN!2shk!4v1570622084668!5m2!1sen-US!2shk" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+            </div>
+            <div class="ct">
+                <div class="c-title">BONJET INTERNATIONAL LIMITED</div>
+                <div class="c-address">
+                    <p>Office Address:</p>
+                    <p>{eyou:global name='web_attr_21' /}</p>
+                </div>
+                <div class="c-box">
+                    <span class="c-box-tel">Tel : {eyou:global name='web_attr_15' /}</span>
+                    <span class="c-box-email">Email : {eyou:global name='web_attr_17' /}</span>
+                    <span class="c-box-fax">Fax : {eyou:global name='web_attr_19' /}</span>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="company-point"></div>
+            {eyou:include file="panel.htm" /}
+        </div>
+    </div>
+
+    {eyou:include file="footer.htm" /}
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".company-menu-arrow").click(function(){
+                $("#"+this.id).toggleClass("minus");
+                $("#"+this.id+"_").toggle();
+          });
+        });
+    </script>
+
+</body>
+</html>

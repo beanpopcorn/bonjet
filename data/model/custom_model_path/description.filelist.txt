@@ -1,0 +1,10 @@
+application/admin/controller/Description.php
+application/admin/model/Description.php
+application/admin/template/description/add.htm
+application/admin/template/description/edit.htm
+application/admin/template/description/index.htm
+application/common/model/Description.php
+application/home/controller/Description.php
+application/home/model/Description.php
+template/pc/lists_description.htm
+template/pc/view_description.htm

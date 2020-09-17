@@ -1,0 +1,10 @@
+application/admin/controller/Factory.php
+application/admin/model/Factory.php
+application/admin/template/factory/add.htm
+application/admin/template/factory/edit.htm
+application/admin/template/factory/index.htm
+application/common/model/Factory.php
+application/home/controller/Factory.php
+application/home/model/Factory.php
+template/pc/lists_factory.htm
+template/pc/view_factory.htm

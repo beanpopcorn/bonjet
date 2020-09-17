@@ -1,0 +1,10 @@
+application/admin/controller/Home.php
+application/admin/model/Home.php
+application/admin/template/home/add.htm
+application/admin/template/home/edit.htm
+application/admin/template/home/index.htm
+application/common/model/Home.php
+application/home/controller/Home.php
+application/home/model/Home.php
+template/pc/lists_home.htm
+template/pc/view_home.htm

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>{$eyou.field.seo_title}</title> 
+    <meta name="renderer" content="webkit" /> 
+    <meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" /> 
+    <meta name="description" content="{$eyou.field.seo_description}" /> 
+    <meta name="keywords" content="{$eyou.field.seo_keywords}" />
+    <link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
+    <link media="screen and (min-width:768px)" rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/css.css">
+    <link media="screen and (max-width:768px)" rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/mobile.css">
+    {eyou:static file="skin/css/basic.css" /}
+    {eyou:static file="skin/css/swiper.min.css" /}
+
+    {eyou:static file="skin/js/jquery.min.js" /}
+ </head> 
+
+<body>
+    {eyou:include file="header.htm" /}
+    
+    <div class="company">
+        {eyou:include file="menu.htm" /}
+        <div class="company-container">
+            <div class="company-header">
+                <div class="company-title">{$eyou.field.typename}</div>
+                <div class="company-fillform">
+                    <a href="#company-point">Send Inquiry</a>
+                </div>
+            </div>
+            <div class="company-article">
+                <!-- News -->
+                <div class="newslist">
+                    <ul>
+                        <li>
+                            <a href="{eyou:global name='web_cmsurl' /}/leaflet/">
+                                <div class="newstitle">Leaflet</div>
+                                <div class="newscontent">Here is the collection of Bonjet’s leaflets which has been categorized in different lines of products including custom made metal products; promotional lanyards, embroidery & woven patches; soft PVC items; silicone made souvenirs; promotional giveaways, leather made items and mobile...</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{eyou:global name='web_cmsurl' /}/exhibition/">
+                                <div class="newstitle">Exhibition</div>
+                                <div class="newscontent">We always join HKTDC Hong Kong Gift and Premium fair in April and the booth will be located in Hall 1. Warmly welcome your stop by, reviewing our latest or featured products, discussing business and future cooperation with us...</div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="{eyou:global name='web_cmsurl' /}/seasonal_products/">
+                                <div class="newstitle">Seasonal Products</div>
+                                <div class="newscontent">Searching for the products for special holidays? To help you develop product or gift proposal, we will provide related novel product suggestions regularly afterwards. We will be thrilled to give you any inspiration fn for those holiday events!...</div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="company-point"></div>
+            {eyou:include file="panel.htm" /}
+        </div>
+    </div>
+
+    {eyou:include file="footer.htm" /}
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".company-menu-arrow").click(function(){
+                $("#"+this.id).toggleClass("minus");
+                $("#"+this.id+"_").toggle();
+          });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<div class="module-contact" id="module-contact">
+    <div class="ctus-title">Contact Us</div>
+    <div class="ctus-tips">For we can provide you a better service, please fill in all * fields below.</div>
+    <div class="ctus-line"></div>
+    {eyou:guestbookform typeid='134' type='default'}
+    <form method="POST" enctype="multipart/form-data" action="{$field.action}" autocomplete="off" spellcheck="false">
+        <div class="ctus-item">
+            <div class="ctus-item-title">{$field.itemname_36}<i>*</i></div>
+            <div class="ctus-item-box">
+                <input type="text" id="attr_36" name="{$field.attr_36}" required>
+            </div>
+        </div>
+        <div class="ctus-item">
+            <div class="ctus-item-title">{$field.itemname_38}<i>*</i></div>
+            <div class="ctus-item-box">
+                <textarea id="attr_38" name="{$field.attr_38}" required></textarea>
+            </div>
+        </div>
+        <div class="ctus-item">
+            <div class="ctus-item-title ctus-file-title"><i>Upload a File (Max:10mb)</i></div>
+            <div class="ctus-item-box">
+                <span class="ctus-upload">
+                    <input type="file" id="inputFile1" name="file1" style="display:none" onchange="changeAgentContent()" />
+                    <input type="text" value="" disabled id="inputFileAgent1" />
+                    <input type="button" onclick="document.getElementById('inputFile1').click()" value="Browse..." />
+                    <script type="text/javascript">
+                        function changeAgentContent(){
+                            document.getElementById("inputFileAgent").value = document.getElementById("inputFile1").value;
+                        }
+                    </script>
+                </span>
+                <span class="ctus-upload">
+                    <input type="file" id="inputFile2" name="file2" style="display:none" onchange="changeAgentContent()" />
+                    <input type="text" value="" disabled id="inputFileAgent2" />
+                    <input type="button" onclick="document.getElementById('inputFile2').click()" value="Browse..." />
+                    <script type="text/javascript">
+                        function changeAgentContent(){
+                            document.getElementById("inputFileAgent2").value = document.getElementById("inputFile2").value;
+                        }
+                    </script>
+                </span>
+                <span class="ctus-upload">
+                    <input type="file" id="inputFile3" name="file3" style="display:none" onchange="changeAgentContent()" />
+                    <input type="text" value="" disabled id="inputFileAgent3" />
+                    <input type="button" onclick="document.getElementById('inputFile3').click()" value="Browse..." />
+                    <script type="text/javascript">
+                        function changeAgentContent(){
+                            document.getElementById("inputFileAgent3").value = document.getElementById("inputFile3").value;
+                        }
+                    </script>
+                </span>
+            </div>
+            <div class="ctus-item-box">
+                <span class="ctus-upload">
+                    <input type="file" id="inputFile4" name="file4" style="display:none" onchange="changeAgentContent()" />
+                    <input type="text" value="" disabled id="inputFileAgent2" />
+                    <input type="button" onclick="document.getElementById('inputFile4').click()" value="Browse..." />
+                    <script type="text/javascript">
+                        function changeAgentContent(){
+                            document.getElementById("inputFileAgent4").value = document.getElementById("inputFile4").value;
+                        }
+                    </script>
+                </span>
+                <span class="ctus-upload">
+                    <input type="file" id="inputFile5" name="file5" style="display:none" onchange="changeAgentContent()" />
+                    <input type="text" value="" disabled id="inputFileAgent5" />
+                    <input type="button" onclick="document.getElementById('inputFile4').click()" value="Browse..." />
+                    <script type="text/javascript">
+                        function changeAgentContent(){
+                            document.getElementById("inputFileAgent5").value = document.getElementById("inputFile5").value;
+                        }
+                    </script>
+                </span>
+                <span class="ctus-upload">
+                    <input type="file" id="inputFile6" name="file6" style="display:none" onchange="changeAgentContent()" />
+                    <input type="text" value="" disabled id="inputFileAgent5" />
+                    <input type="button" onclick="document.getElementById('inputFile6').click()" value="Browse..." />
+                    <script type="text/javascript">
+                        function changeAgentContent(){
+                            document.getElementById("inputFileAgent6").value = document.getElementById("inputFile6").value;
+                        }
+                    </script>
+                </span>
+            </div>
+        </div>
+        <div class="ctus-line"></div>
+        <div class="ctus-title">Contact Information</div>
+        <div class="ctus-item">
+            <div class="ctus-item-title">{$field.itemname_40}<i>*</i></div>
+            <div class="ctus-item-cc">
+                <input type="text" id="attr_40" name="{$field.attr_40}" required>
+            </div>
+        </div>
+        <div class="ctus-item">
+            <div class="ctus-item-title">{$field.itemname_42}</div>
+            <div class="ctus-item-cc">
+                <input type="text" id="attr_42" name="{$field.attr_42}">
+            </div>
+        </div>
+        <div class="ctus-item">
+            <div class="ctus-wrapper-left">
+                <div class="ctus-item-title">{$field.itemname_44}<i>*</i></div>
+                <div class="ctus-item-cc">
+                    <input type="text" id="attr_44" name="{$field.attr_44}" required>
+                </div>
+            </div>
+            <div class="ctus-wrapper-right">
+                <div class="ctus-item-title">{$field.itemname_46}<i>*</i></div>
+                <div class="ctus-item-cc">
+                    <input type="text" id="attr_46" name="{$field.attr_46}" required>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="ctus-item">
+            <div class="ctus-wrapper-left contactname">
+                <div class="ctus-item-title">Contact Name<i>*</i></div>
+                <div class="ctus-item-cc">
+                    <input type="text" id="attr_48" name="{$field.attr_48}" class="cteee" placeholder="First" required>
+                    <input type="text" id="attr_50" name="{$field.attr_50}" class="cteee ctlast" placeholder="Last" required>
+                </div>
+            </div>
+            <div class="ctus-wrapper-right">
+                <div class="ctus-item-title">{$field.itemname_52}<i>*</i></div>
+                <div class="ctus-item-cc">
+                    <input type="text" id="attr_52" name="{$field.attr_52}" required>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="ctus-item">
+            <div class="ctus-wrapper-left">
+                <div class="ctus-item-title">{$field.itemname_54}<i>*</i></div>
+                <div class="ctus-item-cc">
+                    <input type="text" id="attr_54" name="{$field.attr_54}" required>
+                </div>
+            </div>
+            <div class="ctus-wrapper-right">
+                <div class="ctus-item-title">{$field.itemname_56}<i>*</i></div>
+                <div class="ctus-item-cc">
+                    <input type="text" id="attr_56" name="{$field.attr_56}" required>
+                </div>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="ctus-item">
+            <div class="ctus-item-title">{$field.itemname_58}<i>*</i></div>
+            <div class="ctus-item-address">
+                <textarea id="attr_58" name="{$field.attr_58}"></textarea>
+            </div>
+        </div>
+        <div class="ctus-note">
+            <div class="ctus-note-title">Please read the statements listed below and check the box<i>*</i></div>
+            <div class="ctus-note-list">
+                <span><input type="checkbox" checked>All enquiries contents and personal information will be handled in the strictest of confidence. Replies may take some time depending upon the enquiry.</span>
+                <span><input type="checkbox" checked>We will reply to your email, please check your email box given above (junk mail folder as well)</span>
+                <span><input type="checkbox" checked>If you find our email in your junk mail folder, please help to add us of legitimate emails to your Whitelist</span>
+            </div>
+            <div class="ctus-note-title">Type the letters you see in the image below</div>
+            <!-- 验证码开始 -->
+            {eyou:notempty name='$field.IsVertify'}
+            <div class="ctus-note-yzm">
+                <span class="ctus-note-chart">
+                    <img {$field.VertifyData} title="Change Verification Code" />
+                    <a href="javascript:void(0);" id="a_vertify" {$field.VertifyData}>Change</a>
+                </span>
+                <span class="ctus-note-num">
+                    <input type="text" name="vertify" autocomplete="off" placeholder="Verification Code"/>
+                </span>
+            </div>
+            {/eyou:notempty}
+            <!-- 验证码结束 -->
+        </div>
+        <div class="ctus-submit">
+            <input type="submit" name="submit" value="Submit">
+        </div>
+        {$field.hidden}
+    </form>
+    {/eyou:guestbookform}
+    <div class="ctus-note">
+        <div class="ctus-note-title">We Need Your Consent</div>
+        <div class="ctus-note-article">By consenting to this privacy notice you are giving us permission to process your personal data specifically for the purposes identified. Consent is required for us to process your personal data, and your data will not be shared to third parties.</div>
+    </div>
+</div>
+

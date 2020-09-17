@@ -1,0 +1,10 @@
+application/admin/controller/Privacy.php
+application/admin/model/Privacy.php
+application/admin/template/privacy/add.htm
+application/admin/template/privacy/edit.htm
+application/admin/template/privacy/index.htm
+application/common/model/Privacy.php
+application/home/controller/Privacy.php
+application/home/model/Privacy.php
+template/pc/lists_privacy.htm
+template/pc/view_privacy.htm

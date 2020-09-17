@@ -1,0 +1,110 @@
+<div class="header">
+	<div class="header-cc">
+		<div class="logo"><a href="{eyou:global name='web_cmsurl' /}" title="{eyou:global name='web_name' /}"><img src="{eyou:global name='web_templets_pc' /}/skin/images/logo.png"></a></div>
+		<div class="navbox">
+			<div class="nav-top">
+				<div class="nav-top-box">
+					<span class="nav-top-tel">
+						<a href="tel:{eyou:global name='web_attr_15' /}">{eyou:global name='web_attr_15' /}</a>
+					</span>
+					<span class="nav-top-email">
+						<a href="mailto:{eyou:global name='web_attr_17' /}">{eyou:global name='web_attr_17' /}</a>
+					</span>
+				</div>
+				<div class="search-box">
+				{eyou:searchform type='default' channelid='27'}
+				    <form method="get" action="{$field.action}" autocomplete="off" spellcheck="false">
+				        {$field.hidden}
+				        <i></i>
+				        <input type="text" class="text" name="keywords" id="keywords">
+				    </form>
+				{/eyou:searchform}
+				</div>
+			</div>
+			
+			<div class="navlist" id="nv">
+				<ul id="nav">
+					<li style="display: inline-block;">
+						<a href="{eyou:global name='web_cmsurl' /}">HOME</a>
+					</li>
+					{eyou:channel type="top" row="60" id="field" currentstyle="hover"}
+					<li style="display: inline-block;"><a href="{$field.typeurl}">{$field.typename}</a>
+						{eyou:notempty name="$field.children"}
+						<ul>
+							{eyou:channel name="$field.children" row="100" id="field2"}
+							<li><a href="{$field2.typeurl}" class="{eyou:notempty name='$field2.children'}nav-arrow{/eyou:notempty}">{$field2.typename}</a>
+								{eyou:notempty name="$field2.children"}
+								<ul>
+									{eyou:channel name="$field2.children" row="100" id="field3"}
+									 <li><a href="{$field3.typeurl}">{$field3.typename}</a> </li>
+									{/eyou:channel}   
+								</ul> 
+								{/eyou:notempty}  
+							</li>
+							{/eyou:channel}   
+						</ul>
+						{/eyou:notempty}
+					</li>
+					{/eyou:channel}
+				</ul>
+			</div>
+
+			<div class="slider_box">
+				<div class="hslider" id="menu">
+					<span class="slider_top"></span>
+					<span class="slider_center"></span>
+					<span class="slider_bottom"></span>
+				</div>
+			</div>
+
+			<script>
+				$("#menu").click(function () {
+					$("#menu").toggleClass('c_slider');
+					$('#nv').slideToggle(300);
+				})
+			</script>
+
+		</div>
+	</div>
+</div>
+<div class="top"></div>
+
+
+<!-- <div class="htmleaf-container">
+	<div class="slider">
+		<ul class="slider-main">
+			{eyou:adv pid='1'}
+			<li>
+				<a href="{$field.links}"><img src='{$field.litpic}' alt='{$field.title}' e-id="{$field.id}" e-type="adv" /></a>
+			</li>
+			{/eyou:adv}
+		</ul>
+	</div>
+</div>
+
+{eyou:static file="skin/bjs/jquery-2.1.1.min.js" /}
+{eyou:static file="skin/bjs/osSlider.js" /}
+
+<script type="text/javascript">
+	var slider = new osSlider({ //开始创建效果
+		pNode:'.slider', //容器的选择器 必填
+		cNode:'.slider-main li', //轮播体的选择器 必填
+		speed:3000, //速度 默认3000 可不填写
+		autoPlay:true //是否自动播放 默认true 可不填写
+	});
+</script> -->
+
+<div class="swiper-container swiper2">
+	<div class="swiper-wrapper">
+		{eyou:adv pid='1'}
+		<div class="swiper-slide">
+			<a href="{$field.links}"><img src='{$field.litpic}' alt='{$field.title}' e-id="{$field.id}" e-type="adv" /></a>
+		</div>
+		{/eyou:adv}
+	</div>
+	<!-- Add Arrows -->
+	<div class="swiper-button-next"></div>
+	<div class="swiper-button-prev"></div>
+</div>
+
+

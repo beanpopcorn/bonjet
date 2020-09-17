@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>{$eyou.field.seo_title}</title> 
+    <meta name="renderer" content="webkit" /> 
+    <meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" /> 
+    <meta name="description" content="{$eyou.field.seo_description}" /> 
+    <meta name="keywords" content="{$eyou.field.seo_keywords}" />
+    <link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link media="screen and (min-width:768px)" rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/css.css">
+    <link media="screen and (max-width:768px)" rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/mobile.css">
+    {eyou:static file="skin/css/basic.css" /}
+    {eyou:static file="skin/css/swiper.min.css" /}
+
+    {eyou:static file="skin/js/jquery.min.js" /}
+ </head> 
+
+<body>
+    {eyou:include file="header.htm" /}
+    
+    <div class="company">
+        {eyou:include file="menu.htm" /}
+        <div class="company-container">
+            <div class="company-header">
+                <div class="company-title">{$eyou.field.typename}</div>
+                <div class="company-fillform">
+                    <a href="#company-point">Send Inquiry</a>
+                </div>
+            </div>
+            <div class="company-article">
+                <!-- Leaflet -->
+                <div class="seasonal">
+                    <div class="leaflet-wrapper">
+                        <div class="leaflet-left">Bonjet International Ltd. is famous for manufacturing all kinds custom made souvenir metal products, which include bottle openers; cuff links, lapel pins; key chains; coins; medals; military badges; garment buttons; car emblems; metallic coasters; golf accessories and seasonal ornaments...etc. The metals applied for production are ranging from brass, stainless steel, iron, aluminum to pewter (tin and lead alloy) and zinc alloy, and the methods to form the images and shapes are stamping, photo etching, screen printing, offset printing, spin casting and die casting.</div>
+                        <div class="leaflet-right">
+                            <div class="leaflet-pic">
+                                <img src="{eyou:global name='web_templets_pc' /}/skin/images/leaflet.jpg">
+                            </div>
+                            <div class="leaflet-catname">{$eyou.field.typename}</div>
+                        </div>
+                    </div>
+                    <div class="seasonal-box">
+                        <!-- <div class="seasonal-switch">
+                            <span class="seasonal-cc">
+                                <a href="" class="seasonal-cc-prev"></a>
+                                <a href="" class="seasonal-cc-next"></a>
+                            </span>
+                        </div> -->
+                        <div class="seasonal-list">
+                            <ul>
+                                {eyou:list titlelen='30' orderby='now' pagesize='8'}
+                                <li>
+                                    <div class="seasonal-pic">
+                                        <a href="{$field.litpic}" class="example1"><img src="{$field.litpic}"></a>
+                                    </div>
+                                    <div class="seasonal-title">{$field.title}</div>
+                                </li>
+                                {/eyou:list} 
+                            </ul>
+                        </div>
+                        <!--列表分页——开始-->
+                        <div class="pagelist">
+                            <ul>
+                               {eyou:pagelist listitem='index,pre,pageno,next,end' listsize='2' /}
+                            </ul>
+                        </div>
+                        <!--列表分页——结束-->
+                    </div>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="company-point"></div>
+            {eyou:include file="panel.htm" /}
+        </div>
+    </div>
+
+
+    {eyou:include file="footer.htm" /}
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".company-menu-arrow").click(function(){
+                $("#"+this.id).toggleClass("minus");
+                $("#"+this.id+"_").toggle();
+          });
+        });
+    </script>
+
+    {eyou:static file="skin/js/jquery.js" /}
+    {eyou:static file="skin/js/jquery.imgbox.pack.js" /}
+    <script type="text/javascript">
+        $(function(){
+            $(".example1").imgbox({
+                'speedIn'       : 0,
+                'speedOut'      : 0,
+                'alignment'     : 'center',
+                'overlayShow'   : true,
+                'allowMultiple' : false
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,10 @@
+application/admin/controller/Products.php
+application/admin/model/Products.php
+application/admin/template/products/add.htm
+application/admin/template/products/edit.htm
+application/admin/template/products/index.htm
+application/common/model/Products.php
+application/home/controller/Products.php
+application/home/model/Products.php
+template/pc/lists_products.htm
+template/pc/view_products.htm

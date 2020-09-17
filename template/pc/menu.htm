@@ -1,0 +1,102 @@
+<div class="menulist">
+    <div class="company-menu">
+        <div class="company-menu-title">MENU</div>
+        <div class="company-nav">
+            <ul>
+                <!--这部分是导航栏信息。-->
+                <li class="s-firstItem first">
+                    <a href="{eyou:global name='web_cmsurl' /}">
+                        <span>HOME</span>
+                    </a>
+                </li>
+                
+                {eyou:channel type="top" row="60" id="field" currentstyle="hover"}
+                <li class="first">
+                    <div class="d-firstNav s-firstNav">
+                        <span><a href="{$field.typeurl}">{$field.typename}</a></span>
+                        {eyou:notempty name="$field.children"}<i class="fa-caret-right"></i>{/eyou:notempty}
+                    </div>
+                    {eyou:notempty name="$field.children"}
+                    <ul class="d-firstDrop s-firstDrop">
+                        {eyou:channel name="$field.children" row="100" id="field2"}
+                        <li>
+                            <div class="d-secondNav s-secondNav">   
+                                <span><a href="{$field2.typeurl}">{$field2.typename}</a></span>
+                                {eyou:notempty name="$field2.children"}<i class="fa-caret-right"></i> {/eyou:notempty}
+                            </div>
+                            {eyou:notempty name="$field2.children"}
+                            <ul class="d-secondDrop s-secondDrop">
+                                {eyou:channel name="$field2.children" row="100" id="field3"}
+                                <li class="s-thirdItem">
+                                    <a href="{$field3.typeurl}">{$field3.typename}</a>
+                                </li>
+                                {/eyou:channel} 
+                            </ul>
+                            {/eyou:notempty}
+                        </li>
+                        {/eyou:channel}
+                    </ul>
+                    {/eyou:notempty}
+                </li>
+                {/eyou:channel}
+            </ul>
+        </div>
+    </div>
+
+    <div class="best">
+        <div class="swiper-container swiper3">
+            <div class="best-header">
+                <div class="best-sale">BEST SALE</div>
+                <div class="swiper-button">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            <div class="swiper-wrapper">
+                {eyou:arclist titlelen='40' typeid='128' flag='c' addfields='Specifications,Shipment,Origin' }
+                <div class="swiper-slide">
+                    <div class="best-pic"><a href="{$field.arcurl}"><img src="{$field.litpic}"></a></div>
+                    <div class="best-title">{$field.title}</div>
+                    <div class="best-desc">
+                        <div class="best-desc-title">Description:</div>
+                        <div class="best-desc-article">
+                            {$field.Specifications}
+                        </div>
+                        <div class="best-desc-title">Shipment:</div>
+                        <div class="best-desc-article">
+                            {$field.Shipment}
+                        </div>
+                        <div class="best-desc-title">Origin:</div>
+                        <div class="best-desc-article">
+                            {$field.Origin}
+                        </div>
+                    </div>
+                </div>
+                {/eyou:arclist}
+            </div>
+        </div>
+    </div>
+    <!-- <div class="best">
+        <div class="best-header">
+            <span class="best-sale">BEST SALE</span>
+            <span class="best-arrow">
+                <a class="best-arrow-left"></a>
+                <a class="best-arrow-right"></a>
+            </span>
+        </div>
+        <div class="best-box">
+            <ul>
+                
+                <li>
+                    <div class="best-pic"></div>
+                    <div class="best-title"></div>
+                    <div class="best-desc">
+                        <div class="best-desc-title"></div>
+                        <div class="best-desc-article"></div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div> -->
+</div>

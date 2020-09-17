@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!--首頁seo標題-->
+    <title>{eyou:global name='web_title' /}</title>
+    <!--首頁seo描述-->
+    <meta name="description" content="{eyou:global name='web_description' /}" />
+    <!--首頁seo關鍵詞-->
+    <meta name="keywords" content="{eyou:global name='web_keywords' /}" />
+    <!--網站Icon-->
+    <link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link media="screen and (min-width:768px)" rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/css.css">
+    <link media="screen and (max-width:768px)" rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/mobile.css">
+    {eyou:static file="skin/css/basic.css" /}
+    {eyou:static file="skin/css/swiper.min.css" /}
+
+    {eyou:static file="skin/js/jquery.min.js" /}
+    
+</head>
+
+<body class="home">
+    {eyou:include file="header.htm" /}
+    
+    <div class="swiper-container swiper2">
+        <div class="swiper-wrapper">
+            {eyou:adv pid='1'}
+            <div class="swiper-slide">
+                <a href="{$field.links}"><img src='{$field.litpic}' alt='{$field.title}' e-id="{$field.id}" e-type="adv" /></a>
+            </div>
+            {/eyou:adv}
+        </div>
+        <!-- Add Arrows -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>    
+
+    <div class="wicontent">
+        <div class="index-welcome">{eyou:field aid='121' addfields='welcome' /}</div>
+        <div class="index-working">{eyou:field aid='121' addfields='tips' /}</div>
+        <div class="index-company">
+            <div class="index-cpname">COMPANY PROFILE</div>
+            <div class="index-cpbox">
+                <div class="index-cpbox-left">
+                    <div class="index-cpbox-summary">{eyou:field aid='121' addfields='indexfile' /}</div>
+                    <div class="index-cpbox-readmore">
+                        <a href="{eyou:global name='web_cmsurl' /}/company/">Read More</a>
+                    </div>
+                </div>
+                <div class="index-cpbox-right">
+                    <img src="{eyou:field aid='121' addfields='indexpic' /}">
+                </div>
+            </div>
+        </div>
+        <div class="index-hot">
+            <div class="index-hot-name">HOT PRODUCTS</div>
+            <!--手風琴-->
+            <div class="index-hot-flash">
+                <ul>
+                    {eyou:arclist typeid='142' flag='a' orderby='sort_order' row='3'}
+                    <li class="{eyou:if condition='$i == 1'}index-shadow{/eyou:if}">
+                        <div class="index-hot-pic">
+                            <img src="{$field.litpic}">
+                        </div>
+                        <div class="index-hot-box">
+                            <div class="index-hot-title">{$field.title}</div>
+                            <div class="index-hot-summary">{eyou:field aid='$field.aid' addfields='content' /}</div>
+                            <div class="index-hot-readmore">
+                                <a href="{eyou:global name='web_cmsurl' /}/products/">Read More</a>
+                            </div>
+                        </div>
+                    </li>
+                    {/eyou:arclist}
+                </ul>   
+            </div>
+            <!--手風琴結束-->
+        </div>
+    </div>
+
+    {eyou:include file="footer.htm" /}
+
+    <script type="text/javascript">
+        //手風琴
+        var cc = 0;
+        $(".index-hot-flash ul li").hover(function(){
+            cc = $(this).index();
+            $(this).addClass('index-shadow').siblings().removeClass('index-shadow');
+            $(this).stop().stop().animate({width:570},500).siblings("li").stop().animate({width:275},500);
+        });
+    </script>
+
+    <style type="text/css">
+        .cms-home{
+            color: #fde589!important;
+        }
+    </style>
+
+</body>
+
+</html>
+
+

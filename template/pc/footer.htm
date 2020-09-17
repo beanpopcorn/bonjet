@@ -1,0 +1,158 @@
+<div class="footer">
+	<div class="wicontent">
+		<div class="ft-ctus">
+			<div class="ft-title">Contacts</div>
+			<div class="ft-box">
+				<span class="ft-tel">{eyou:global name='web_attr_15' /}</span>
+				<span class="ft-fax">{eyou:global name='web_attr_19' /}</span>
+				<span class="ft-email">{eyou:global name='web_attr_17' /}</span>
+				<span class="ft-location">Office Address:<br>{eyou:global name='web_attr_21' /}</span>
+			</div>
+		</div>
+		<div class="ft-info">
+			<div class="ft-title">Information</div>
+			<div class="ft-infolist">
+				<ul>
+					<li>
+						<a href="{eyou:global name='web_cmsurl' /}">HOME</a>
+					</li>
+					{eyou:channel type="top" row="60" id="field" currentstyle="hover"}
+					<li><a href="{$field.typeurl}">{$field.typename}</a>
+					{/eyou:channel}
+				</ul>
+			</div>
+		</div>
+		<div class="ft-news">
+			<div class="ft-news-header">
+				<span class="ft-news-title">Latest News</span>
+				<span class="ft-news-tab"></span>
+			</div>
+			<!-- Add Arrows -->
+			<div class="swiper-button">
+				<div class="swiper-button-next"></div>
+				<a class="swiper-button-menu"></a>
+				<div class="swiper-button-prev"></div>
+			</div>
+			<!-- Swiper -->
+			<div class="swiper-container swiper1">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						<div class="ft-slide-pic">
+							<img src="{eyou:global name='web_templets_pc' /}/skin/images/ft-item-1.jpg">
+						</div>
+						<div class="ft-slide-box">
+							<div class="ft-slide-title">Leaflet</div>
+							<div class="ft-slide-summary">Here is the collection of Bonjet’s leaflets which has been categorized in different lines of products including custom made metal products; promotional lanyards,...</div>
+							<div class="ft-slide-readmore">
+								<a href="{eyou:global name='web_cmsurl' /}/leaflet/">Read More</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="ft-slide-pic">
+							<img src="{eyou:global name='web_templets_pc' /}/skin/images/ft-item-2.jpg">
+						</div>
+						<div class="ft-slide-box">
+							<div class="ft-slide-title">Exhibition</div>
+							<div class="ft-slide-summary">We always join HKTDC Hong Kong Gift and Premium fair in April and the booth will be located in Hall 1. Warmly welcome your stop by, reviewing our latest or featured ,,,</div>
+							<div class="ft-slide-readmore">
+								<a href="{eyou:global name='web_cmsurl' /}/exhibition/">Read More</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="ft-slide-pic">
+							<img src="{eyou:global name='web_templets_pc' /}/skin/images/ft-item-1.jpg">
+						</div>
+						<div class="ft-slide-box">
+							<div class="ft-slide-title">Leaflet</div>
+							<div class="ft-slide-summary">Here is the collection of Bonjet’s leaflets which has been categorized in different lines of products including custom made metal products; promotional lanyards,...</div>
+							<div class="ft-slide-readmore">
+								<a href="{eyou:global name='web_cmsurl' /}/leaflet/">Read More</a>
+							</div>
+						</div>
+					</div>
+					<div class="swiper-slide">
+						<div class="ft-slide-pic">
+							<img src="{eyou:global name='web_templets_pc' /}/skin/images/ft-item-2.jpg">
+						</div>
+						<div class="ft-slide-box">
+							<div class="ft-slide-title">Exhibition</div>
+							<div class="ft-slide-summary">We always join HKTDC Hong Kong Gift and Premium fair in April and the booth will be located in Hall 1. Warmly welcome your stop by, reviewing our latest or featured ,,,</div>
+							<div class="ft-slide-readmore">
+								<a href="{eyou:global name='web_cmsurl' /}/exhibition/">Read More</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="ft">
+	<div class="wicontent">
+		<div class="copyright">
+			<p>Copyright © 2017 Bonjet International Limited</p>
+			<p>Consulted & Designed by In Smart Media Company</p>
+		</div>
+		<!-- <div class="ft-share">
+			<ul>
+				<li>
+					<a href="mailto:sales@bonjet.com"><img src="{eyou:global name='web_templets_pc' /}/skin/images/gmail.png"></a>
+				</li>
+			</ul>
+		</div> -->
+	</div>
+</div>
+<div class="ft-bottom"></div>
+
+{eyou:static file="skin/js/swiper.min.js" /}
+<script>
+	var swiper = new Swiper('.swiper1', {
+		slidesPerView: 2,
+		slidesPerGroup: 2,
+		loop: true,
+		loopFillGroupWithBlank: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+
+	var swiper2 = new Swiper('.swiper2', {
+		speed: 3000,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+	});
+
+	var swiper3 = new Swiper('.swiper3', {
+		slidesPerView: 1,
+		slidesPerGroup: 1,
+		loop: true,
+		loopFillGroupWithBlank: true,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+	});
+</script>
+
+{eyou:static file="skin/js/index.js" /}
+
+<!-- 应用插件标签 start -->
+ {eyou:weapp type='default' /}
+<!-- 应用插件标签 end -->
+
+
+<!--[if lt IE 9]>
+<div class="notsupport">
+    <h1>:( 非常遗憾</h1>
+    <h2>您的浏览器版本太低，请升级您的浏览器</h2>
+</div>
+<![endif]-->

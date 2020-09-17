@@ -1,0 +1,10 @@
+application/admin/controller/Pantone.php
+application/admin/model/Pantone.php
+application/admin/template/pantone/add.htm
+application/admin/template/pantone/edit.htm
+application/admin/template/pantone/index.htm
+application/common/model/Pantone.php
+application/home/controller/Pantone.php
+application/home/model/Pantone.php
+template/pc/lists_pantone.htm
+template/pc/view_pantone.htm

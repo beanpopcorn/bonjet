@@ -1,0 +1,10 @@
+application/admin/controller/Faq.php
+application/admin/model/Faq.php
+application/admin/template/faq/add.htm
+application/admin/template/faq/edit.htm
+application/admin/template/faq/index.htm
+application/common/model/Faq.php
+application/home/controller/Faq.php
+application/home/model/Faq.php
+template/pc/lists_faq.htm
+template/pc/view_faq.htm

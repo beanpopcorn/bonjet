@@ -1,0 +1,124 @@
+<div class="header">
+	<div class="header-cc">
+		<div class="logo"><a href="{eyou:global name='web_cmsurl' /}" title="{eyou:global name='web_name' /}"><img src="{eyou:global name='web_templets_pc' /}/skin/images/logo.png"></a></div>
+		<div class="navbox">
+			<div class="nav-top">
+				<div class="nav-top-box">
+					<span class="nav-top-cpname">
+						{eyou:global name='web_name' /}
+					</span>
+					<span class="nav-top-tel">
+						<a href="tel:{eyou:global name='web_attr_15' /}">{eyou:global name='web_attr_15' /}</a>
+					</span>
+					<span class="nav-top-email">
+						<a href="mailto:{eyou:global name='web_attr_17' /}">{eyou:global name='web_attr_17' /}</a>
+					</span>
+				</div>
+				<div class="search-box">
+				{eyou:searchform type='default' channelid='27'}
+				    <form method="get" action="{$field.action}" autocomplete="off" spellcheck="false" onsubmit="return searchForm();">
+				        {$field.hidden}
+				        <i></i>
+				        <input type="text" class="text" name="keywords" id="keywords">
+				    </form>
+					<script type="text/javascript">
+						function searchForm()
+						{
+							var keywords = document.getElementById('keywords').value;
+							if (keywords == '') {
+								alert('請輸入搜索關鍵字');
+								return false;
+							}
+							return true;
+						}
+					</script>
+				{/eyou:searchform}
+				</div>
+			</div>
+			<div class="navlist" id="nv">
+				<ul id="nav">
+					<li style="display: inline-block;">
+						<a href="{eyou:global name='web_cmsurl' /}" class="cms-home">HOME</a>
+					</li>
+					{eyou:channel type="top" row="60" id="field" currentstyle="hover"}
+					<li style="display: inline-block;"><a href="{$field.typeurl}" class="{$field.currentstyle}">{$field.typename}</a>
+						{eyou:notempty name="$field.children"}
+						<ul>
+							{eyou:channel name="$field.children" row="100" id="field2"}
+							<li><a href="{$field2.typeurl}" class="{eyou:notempty name='$field2.children'}nav-arrow{/eyou:notempty}">{$field2.typename}</a>
+								{eyou:notempty name="$field2.children"}
+								<ul>
+									{eyou:channel name="$field2.children" row="100" id="field3"}
+									 <li><a href="{$field3.typeurl}">{$field3.typename}</a> </li>
+									{/eyou:channel}   
+								</ul> 
+								{/eyou:notempty}  
+							</li>
+							{/eyou:channel}   
+						</ul>
+						{/eyou:notempty}
+					</li>
+					{/eyou:channel}
+				</ul>
+			</div>
+		</div>
+		<div class="slider_box">
+			<div class="hslider" id="menu">
+				<span class="slider_top"></span>
+				<span class="slider_center"></span>
+				<span class="slider_bottom"></span>
+			</div>
+		</div>
+		<script>
+			$("#menu").click(function () {
+				$("#menu").toggleClass('c_slider');
+				$('#s-side').slideToggle(300);
+			})
+		</script>
+	</div>
+</div>
+
+<div class="s-side" id="s-side">
+	<ul>
+		<!--这部分是导航栏信息。-->
+		<li class="s-firstItem first">
+			<a href="{eyou:global name='web_cmsurl' /}">
+				<span>HOME</span>
+			</a>
+		</li>
+		
+		{eyou:channel type="top" row="60" id="field" currentstyle="hover"}
+		<li class="first">
+			<div class="d-firstNav s-firstNav">
+				<span><a href="{$field.typeurl}">{$field.typename}</a></span>
+				{eyou:notempty name="$field.children"}<i class="fa-caret-right"></i>{/eyou:notempty}
+			</div>
+			{eyou:notempty name="$field.children"}
+			<ul class="d-firstDrop s-firstDrop">
+				{eyou:channel name="$field.children" row="100" id="field2"}
+				<li>
+					<div class="d-secondNav s-secondNav">	
+						<span><a href="{$field2.typeurl}">{$field2.typename}</a></span>
+						{eyou:notempty name="$field2.children"}<i class="fa-caret-right"></i> {/eyou:notempty}
+					</div>
+					{eyou:notempty name="$field2.children"}
+					<ul class="d-secondDrop s-secondDrop">
+						{eyou:channel name="$field2.children" row="100" id="field3"}
+						<li class="s-thirdItem">
+							<a href="{$field3.typeurl}">{$field3.typename}</a>
+						</li>
+						{/eyou:channel} 
+					</ul>
+					{/eyou:notempty}
+				</li>
+				{/eyou:channel}
+			</ul>
+			{/eyou:notempty}
+		</li>
+		{/eyou:channel}
+	</ul>
+</div>
+
+<div class="top"></div>
+
+

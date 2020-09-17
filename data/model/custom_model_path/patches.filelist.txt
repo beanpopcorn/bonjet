@@ -1,0 +1,10 @@
+application/admin/controller/Patches.php
+application/admin/model/Patches.php
+application/admin/template/patches/add.htm
+application/admin/template/patches/edit.htm
+application/admin/template/patches/index.htm
+application/common/model/Patches.php
+application/home/controller/Patches.php
+application/home/model/Patches.php
+template/pc/lists_patches.htm
+template/pc/view_patches.htm

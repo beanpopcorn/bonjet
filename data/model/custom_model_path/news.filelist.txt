@@ -1,0 +1,10 @@
+application/admin/controller/News.php
+application/admin/model/News.php
+application/admin/template/news/add.htm
+application/admin/template/news/edit.htm
+application/admin/template/news/index.htm
+application/common/model/News.php
+application/home/controller/News.php
+application/home/model/News.php
+template/pc/lists_news.htm
+template/pc/view_news.htm

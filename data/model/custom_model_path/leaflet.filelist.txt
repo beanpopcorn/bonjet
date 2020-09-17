@@ -1,0 +1,10 @@
+application/admin/controller/Leaflet.php
+application/admin/model/Leaflet.php
+application/admin/template/leaflet/add.htm
+application/admin/template/leaflet/edit.htm
+application/admin/template/leaflet/index.htm
+application/common/model/Leaflet.php
+application/home/controller/Leaflet.php
+application/home/model/Leaflet.php
+template/pc/lists_leaflet.htm
+template/pc/view_leaflet.htm

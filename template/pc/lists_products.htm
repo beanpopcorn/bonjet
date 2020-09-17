@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>{$eyou.field.seo_title}</title> 
+    <meta name="renderer" content="webkit" /> 
+    <meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" /> 
+    <meta name="description" content="{$eyou.field.seo_description}" /> 
+    <meta name="keywords" content="{$eyou.field.seo_keywords}" />
+    <link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
+    <link media="screen and (min-width:768px)" rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/css.css">
+    <link media="screen and (max-width:768px)" rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/mobile.css">
+    {eyou:static file="skin/css/basic.css" /}
+    {eyou:static file="skin/css/swiper.min.css" /}
+
+    {eyou:static file="skin/js/jquery.min.js" /}
+ </head> 
+
+<body>
+    {eyou:include file="header.htm" /}
+    
+    <div class="company">
+        {eyou:include file="menu.htm" /}
+        <div class="company-container">
+            <div class="company-header">
+                <div class="company-title">{$eyou.field.typename}</div>
+                <div class="company-fillform">
+                    <a href="#company-point">Send Inquiry</a>
+                </div>
+            </div>
+            <div class="company-article product-back">
+                <!-- Products -->
+                <div class="products-list">
+                    <ul>
+                        {eyou:channel type="son"}
+                        <li>
+                            <div class="products-title"><i class="products-expand" id="c{$i}">●</i><a href="{$field.typeurl}">{$field.typename}</a></div>
+                            <div class="sonlist" id="c{$i}_">
+                                {eyou:notempty name="$field.children"}
+                                    <ul>
+                                        {eyou:channel name="$field.children" row="100" id="field2"}
+                                        <li><a href="{$field2.typeurl}">{$field2.typename}</a></li>
+                                        {/eyou:channel}
+                                    </ul>
+                                {/eyou:notempty}
+                            </div>
+                        </li>
+                        {/eyou:channel}
+                    </ul>
+                </div>
+                <div class="clear"></div>
+                <div id="company-point"></div>
+                {eyou:include file="panel.htm" /}
+            </div>
+        </div>
+    </div>
+
+    {eyou:include file="footer.htm" /}
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".company-menu-arrow").click(function(){
+                $("#"+this.id).toggleClass("minus");
+                $("#"+this.id+"_").toggle();
+            });
+
+            $(".products-expand").click(function(){
+                $("#"+this.id+"_").toggle();
+            });
+        });
+    </script>
+
+</body>
+</html>

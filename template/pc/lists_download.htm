@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title>{$eyou.field.seo_title}</title> 
+    <meta name="renderer" content="webkit" /> 
+    <meta charset="utf-8" /> 
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=0,minimal-ui" /> 
+    <meta name="description" content="{$eyou.field.seo_description}" /> 
+    <meta name="keywords" content="{$eyou.field.seo_keywords}" />
+    <link href="{eyou:global name='web_cmspath' /}/favicon.ico" rel="shortcut icon" type="image/x-icon" /> 
+    <link media="screen and (min-width:768px)" rel="stylesheet" type="text/css" href="{eyou:global name='web_templets_pc' /}/skin/css/css.css">
+    <link media="screen and (max-width:768px)" rel="stylesheet" href="{eyou:global name='web_templets_pc' /}/skin/css/mobile.css">
+    {eyou:static file="skin/css/basic.css" /}
+    {eyou:static file="skin/css/swiper.min.css" /}
+
+    {eyou:static file="skin/js/jquery.min.js" /}
+ </head> 
+
+<body>
+    {eyou:include file="header.htm" /}
+    
+    <div class="company">
+        {eyou:include file="menu.htm" /}
+        <div class="company-container">
+            <div class="company-header">
+                <div class="company-title">{$eyou.field.typename}</div>
+                <div class="company-fillform">
+                    <a href="#company-point">Send Inquiry</a>
+                </div>
+            </div>
+            <div class="company-article">
+                <!-- data center -->
+                <div class="data-center">
+                    <div class="data-center-title">Download</div>
+                    <div class="data-center-list">
+                        <ul>
+                            {eyou:list pagesize="10" id='field'}
+                            {eyou:arcview aid='$field.aid' id='view'}
+                                {eyou:volist name="$view.file_list" id='vo' orderby='sort_order' row='1'}
+                                <li>
+                                    <a data-link="{$vo.downurl}" title="{$field.title}" data-id="{$field.aid}" class="data-download">
+                                        <span class="data-center-type">
+                                            <img src="{$field.litpic}">
+                                        </span>
+                                        <span class="data-center-info">
+                                            <span class="data-center-filename">{$field.title}</span>
+                                            <span class="data-center-typename">Category：{$field.typename}</span>
+                                        </span>
+                                        <p></p>
+                                    </a>
+                                </li>
+                                {/eyou:volist}
+                            {/eyou:arcview}
+                            {/eyou:list}
+                        </ul>
+                    </div>
+                    <!--列表分页——开始-->
+                    <div class="pagelist">
+                        <ul>
+                           {eyou:pagelist listitem='index,pre,pageno,next,end' listsize='2' /}
+                        </ul>
+                    </div>
+                    <!--列表分页——结束-->
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="company-point"></div>
+            {eyou:include file="panel.htm" /}
+        </div>
+    </div>
+
+    <!-- 彈窗 -->
+    <div id="cover">
+        <div id="showdiv">
+            <div class="showcontainer">
+                <div class="close" id="close"></div>
+                <div class="show-title">Contact Information</div>
+                <div class="show-tips">In order to prevent spam robots , we will need you to provide the following information.Our system will send you a download pdf file link  to your email account.Please note that all information will be strictly kept confidential.</div>
+                {eyou:guestbookform typeid='138' type='default'}
+                <form method="POST" enctype="multipart/form-data" action="{$field.action}" autocomplete="off" spellcheck="false">
+                    <div class="show-order">
+                        <div class="show-item">   
+                            <div class="show-name">{$field.itemname_60}*</div>
+                                <div class="show-box">
+                                    <input type="text" id="attr_60" name="{$field.attr_60}" required>
+                            </div>
+                        </div> 
+                        <div class="show-item"> 
+                            <div class="show-name">{$field.itemname_62}*</div>
+                            <div class="show-box">
+                                <input type="text" id="attr_62" name="{$field.attr_62}" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show-order">
+                        <div class="show-item"> 
+                            <div class="show-name">{$field.itemname_64}*</div>
+                            <div class="show-box">
+                                <input type="text" id="attr_64" name="{$field.attr_64}" required>
+                            </div>
+                        </div>
+                        <div class="show-item"> 
+                            <div class="show-name">{$field.itemname_66}*</div>
+                            <div class="show-box">
+                                <input type="text" id="attr_66" name="{$field.attr_66}" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="show-item"> 
+                        <div class="show-name">{$field.itemname_68}*</div>
+                        <div class="show-box">
+                            <input type="text" id="attr_68" name="{$field.attr_68}" required>
+                        </div>
+                    </div>
+                    <div class="ctus-note">
+                        <!-- 验证码开始 -->
+                        {eyou:notempty name='$field.IsVertify'}
+                        <div class="ctus-note-yzm">
+                            <span class="ctus-note-chart">
+                                <img {$field.VertifyData} title="看不清？點擊更換驗證碼" />
+                                <a href="javascript:void(0);" id="a_vertify" {$field.VertifyData}>點擊更換</a>
+                            </span>
+                            <div class="ctus-note-title">Captcha*</div>
+                            <span class="ctus-note-num">
+                                <input type="text" name="vertify" autocomplete="off" />
+                            </span>
+                        </div>
+                        {/eyou:notempty}
+                        <!-- 验证码结束 -->
+                    </div>
+                    <div class="ctus-note-title">You must enter the characters with black color</div>
+                    <div class="show-btn">
+                        <input type="submit" name="submit" class="show-submit" value="Submit">
+                    </div>
+                    {$field.hidden}
+                </form>
+                {/eyou:guestbookform}
+                <div class="ctus-note">
+                    <div class="ctus-note-title">We Need Your Consent</div>
+                    <div class="ctus-note-article">By consenting to this privacy notice you are giving us permission to process your personal data specifically for the purposes identified. Consent is required for us to process your personal data, and your data will not be shared to third parties.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {eyou:include file="footer.htm" /}
+
+    <script type="text/javascript">
+        var link,aid;
+        $(".data-download").click(function() {
+            $('#showdiv').show();
+            $('#cover').css('display','block');
+            $('#cover').css('height',document.body.clientHight+'px');
+            link = $(this).attr('data-link');
+            aid = $(this).attr('data-id');
+        });
+
+        $("#close").click(function(){
+            $('#showdiv').hide();
+            $('#cover').css('display','none');
+        });
+
+        $(".show-submit").click(function(){
+            $('.data-download').each(function(){
+                var $this = $(this);
+                var dataid = $this.attr('data-id');
+                if(dataid == aid)
+                {
+                    $this.attr('href',link);
+                    $('.data-download p').trigger('click');
+                }
+            })
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".company-menu-arrow").click(function(){
+                $("#"+this.id).toggleClass("minus");
+                $("#"+this.id+"_").toggle();
+          });
+        });
+    </script>
+</body>
+</html>
